@@ -82,7 +82,9 @@ function App(): JSX.Element {
       <View style={styles.row}>
         {buttons.map(e => {
           return (
-            <TouchableOpacity onPress={() => Alert.alert('', e.text)}>
+            <TouchableOpacity
+              key={e.text}
+              onPress={() => Alert.alert('', e.text)}>
               <Wrapper hasShadow={e.hasShadow}>
                 <LinearGradient
                   {...gradientConfigs}
